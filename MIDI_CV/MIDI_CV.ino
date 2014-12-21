@@ -2,24 +2,27 @@
 #include "AH_MCP4922.h"
 
 #define LED 13   		    // LED pin on Arduino Uno
-#define Gate1 1
-#define Gate2 2
-#define Gate3 3
-#define Gate4 4
+#define Gate1 2
+#define Gate2 3
+#define Gate3 4
+#define Gate4 5
 
 
 //define AnalogOutput (MOSI_pin, SCK_pin, CS_pin, DAC_x, GAIN) 
 
-AH_MCP4922 AnalogOutput1(11,10,12,LOW,LOW);
-AH_MCP4922 AnalogOutput2(11,10,12,HIGH,LOW);
 
-AH_MCP4922 AnalogOutput3(8,7,9,LOW,LOW);
-AH_MCP4922 AnalogOutput4(8,7,9,HIGH,LOW);
 
 AH_MCP4922 Pitch1(A1,A0,A2,LOW,LOW);
 AH_MCP4922 Velocity1(A1,A0,A2,HIGH,LOW);
+
 AH_MCP4922 Pitch2(A4,A3,A5,LOW,LOW);
-AH_MCP4922 Velocity3(A4,A3,A5,HIGH,LOW);
+AH_MCP4922 Velocity2(A4,A3,A5,HIGH,LOW);
+
+AH_MCP4922 Pitch3(8,7,9,LOW,LOW);
+AH_MCP4922 Velocity3(8,7,9,HIGH,LOW);
+
+AH_MCP4922 Pitch4(11,10,12,LOW,LOW);
+AH_MCP4922 Velocity4(11,10,12,HIGH,LOW);
 
 
 int nextNoteOutput = 0;

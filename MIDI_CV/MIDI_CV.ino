@@ -1,13 +1,6 @@
 #include <MIDI.h>
 #include "AH_MCP4922.h"
 
-#define LED 13   		    // LED pin on Arduino Uno
-#define Gate1 2
-#define Gate2 3
-#define Gate3 4
-#define Gate4 5
-
-
 //define AnalogOutput (MOSI_pin, SCK_pin, CS_pin, DAC_x, GAIN) 
 
 AH_MCP4922 Pitch1(A1,A0,A2,LOW,LOW);
@@ -25,7 +18,7 @@ AH_MCP4922 Velocity4(11,10,12,HIGH,LOW);
 AH_MCP4922 pitchDACs[4] = { Pitch1, Pitch2, Pitch3, Pitch4 };
 AH_MCP4922 velocityDACs[4] = { Velocity1, Velocity2, Velocity3, Velocity4 };
 
-int noteNumbers[4];
+int noteNumbers[4];  // keep track of notes that have been gated on
 int gatePins[4] = { 2, 3, 4, 5 };
 
 int nextNoteOutput = 0;
@@ -43,11 +36,11 @@ void handleNoteOn(byte channel, byte pitch, byte velocity)
     return;
   }
   
-  noteNumbers[nextNoteOutput] = pitch;
   pitchDACs[nextNoteOutput].setValue((pitch - 12) * 42);
   velocityDACs[nextNoteOutput].setValue(velocity * 32);
   digitalWrite(gatePins[nextNoteOutput], HIGH);
   
+  noteNumbers[nextNoteOutput] = pitch;
   nextNoteOutput = (nextNoteOutput + 1) % 4;
 }
 

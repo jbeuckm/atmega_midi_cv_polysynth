@@ -16,7 +16,13 @@ AH_MCP4922 AnalogOutput2(11,10,12,HIGH,LOW);
 AH_MCP4922 AnalogOutput3(8,7,9,LOW,LOW);
 AH_MCP4922 AnalogOutput4(8,7,9,HIGH,LOW);
 
-int liveNoteCount = 0;
+AH_MCP4922 Pitch1(A1,A0,A2,LOW,LOW);
+AH_MCP4922 Velocity1(A1,A0,A2,HIGH,LOW);
+AH_MCP4922 Pitch2(A4,A3,A5,LOW,LOW);
+AH_MCP4922 Velocity3(A4,A3,A5,HIGH,LOW);
+
+
+int nextNoteOutput = 0;
 
 MIDI_CREATE_DEFAULT_INSTANCE();
 
@@ -86,6 +92,10 @@ void handlePitchBend(byte channel, int bend)
 
 void setup()
 {
+pinMode(A0, OUTPUT);
+pinMode(A1, OUTPUT);
+pinMode(A2, OUTPUT);
+
     pinMode(LED, OUTPUT);
 /*    
     pinMode(Gate1, OUTPUT);
@@ -107,9 +117,9 @@ void setup()
     // Initiate MIDI communications, listen to all channels
     MIDI.begin(MIDI_CHANNEL_OMNI);
     
-    // C8 at full velocity for calibration on powerup
+    // C8 at full velocity for 8.0V calibration on powerup
     handleNoteOn(17, 108, 127);
-    liveNoteCount--;
+
 }
 
 void loop()

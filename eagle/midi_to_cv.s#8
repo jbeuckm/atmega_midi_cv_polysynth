@@ -10162,7 +10162,6 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <part name="PAD5" library="wirepad" deviceset="2,54/0,9" device="" value="velocity cv"/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
 <part name="U$4" library="MCP4822" deviceset="MCP4822-E/P" device=""/>
-<part name="U$5" library="MCP4822" deviceset="MCP4822-E/P" device=""/>
 <part name="PAD7" library="wirepad" deviceset="2,54/0,9" device="" value="gate output"/>
 <part name="PAD8" library="wirepad" deviceset="2,54/0,9" device="" value="gate output"/>
 <part name="PAD9" library="wirepad" deviceset="2,54/0,9" device="" value="gate output"/>
@@ -10238,7 +10237,6 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="PAD5" gate="1" x="180.34" y="101.6" rot="MR0"/>
 <instance part="P+6" gate="1" x="86.36" y="137.16"/>
 <instance part="U$4" gate="A" x="106.68" y="124.46"/>
-<instance part="U$5" gate="A" x="106.68" y="60.96"/>
 <instance part="PAD7" gate="1" x="93.98" y="2.54" rot="MR0"/>
 <instance part="PAD8" gate="1" x="104.14" y="-17.78" rot="MR0"/>
 <instance part="PAD9" gate="1" x="93.98" y="-33.02" rot="MR0"/>
@@ -10598,8 +10596,6 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <pinref part="U1" gate="G$1" pin="PD7(AIN1)"/>
 <wire x1="43.18" y1="33.02" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="33.02" x2="71.12" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="A" pin="SCK"/>
-<wire x1="71.12" y1="58.42" x2="88.9" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -10607,8 +10603,6 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <pinref part="U1" gate="G$1" pin="PB0(ICP)"/>
 <wire x1="43.18" y1="27.94" x2="73.66" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="27.94" x2="73.66" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="A" pin="SDI"/>
-<wire x1="73.66" y1="55.88" x2="88.9" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$29" class="0">
@@ -10616,8 +10610,6 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <pinref part="U1" gate="G$1" pin="PB1(OC1A)"/>
 <wire x1="43.18" y1="25.4" x2="76.2" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="25.4" x2="76.2" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="A" pin="~CS"/>
-<wire x1="76.2" y1="60.96" x2="88.9" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$30" class="0">

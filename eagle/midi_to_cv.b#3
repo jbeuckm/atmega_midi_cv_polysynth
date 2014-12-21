@@ -2701,6 +2701,21 @@ design rules under a new name.</description>
 <contactref element="U$2" pad="2"/>
 <wire x1="-6.35" y1="-7.62" x2="27.94" y2="50.8" width="0" layer="19" extent="1-1"/>
 </signal>
+<signal name="N$65">
+<contactref element="U1" pad="26"/>
+<contactref element="U$3" pad="3"/>
+<wire x1="-6.35" y1="-55.88" x2="25.4" y2="50.8" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$66">
+<contactref element="U1" pad="27"/>
+<contactref element="U$3" pad="4"/>
+<wire x1="-6.35" y1="-58.42" x2="22.86" y2="50.8" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$67">
+<contactref element="U1" pad="28"/>
+<contactref element="U$3" pad="2"/>
+<wire x1="-6.35" y1="-53.34" x2="20.32" y2="50.8" width="0" layer="19" extent="1-1"/>
+</signal>
 </signals>
 <errors>
 <approved hash="1,20,588c966c97745994"/>

@@ -9,5 +9,5 @@ Largely based on http://www.experimentalistsanonymous.com/ve3wwg/doku.php?id=ana
 
 Uses 4922 library from http://www.alhin.de/arduino
 
-
+![screenshot](schemo.png)
 

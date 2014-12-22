@@ -10762,7 +10762,10 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <net name="N$27" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PB4(MISO)"/>
-<wire x1="43.18" y1="17.78" x2="68.58" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="17.78" x2="71.12" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="17.78" x2="71.12" y2="-93.98" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="A" pin="~CS"/>
+<wire x1="71.12" y1="-93.98" x2="88.9" y2="-93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$28" class="0">
@@ -10977,13 +10980,19 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <net name="N$14" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PB3(MOSI/OC2)"/>
-<wire x1="43.18" y1="20.32" x2="66.04" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="20.32" x2="73.66" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="20.32" x2="73.66" y2="-99.06" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="A" pin="SDI"/>
+<wire x1="73.66" y1="-99.06" x2="88.9" y2="-99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$15" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PB2(SS/OC1B)"/>
-<wire x1="43.18" y1="22.86" x2="63.5" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="22.86" x2="76.2" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="22.86" x2="76.2" y2="-96.52" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="A" pin="SCK"/>
+<wire x1="76.2" y1="-96.52" x2="88.9" y2="-96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$13" class="0">

@@ -11227,6 +11227,33 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <wire x1="96.52" y1="86.36" x2="134.62" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$65" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PC3(ADC3)"/>
+<wire x1="43.18" y1="66.04" x2="119.38" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="66.04" x2="119.38" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="A" pin="SCK"/>
+<wire x1="119.38" y1="17.78" x2="144.78" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$66" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PC4(ADC4/SDA)"/>
+<wire x1="43.18" y1="63.5" x2="116.84" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="63.5" x2="116.84" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="A" pin="SDI"/>
+<wire x1="116.84" y1="15.24" x2="144.78" y2="15.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$67" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PC5(ADC5/SCL)"/>
+<wire x1="43.18" y1="60.96" x2="114.3" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="60.96" x2="114.3" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="A" pin="~CS"/>
+<wire x1="114.3" y1="20.32" x2="144.78" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>

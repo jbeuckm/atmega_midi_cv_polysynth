@@ -10331,6 +10331,10 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <part name="IC4" library="linear" deviceset="TL082" device="P"/>
 <part name="IC6" library="linear" deviceset="TL082" device="P"/>
 <part name="IC7" library="linear" deviceset="TL082" device="P"/>
+<part name="P+7" library="supply1" deviceset="+12V" device=""/>
+<part name="P-3" library="supply1" deviceset="-12V" device=""/>
+<part name="P+11" library="supply1" deviceset="+12V" device=""/>
+<part name="P-5" library="supply1" deviceset="-12V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10454,6 +10458,14 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="IC6" gate="B" x="213.36" y="-38.1"/>
 <instance part="IC7" gate="A" x="172.72" y="-63.5"/>
 <instance part="IC7" gate="B" x="175.26" y="-91.44"/>
+<instance part="IC1" gate="P" x="193.04" y="121.92"/>
+<instance part="IC4" gate="P" x="203.2" y="55.88"/>
+<instance part="IC6" gate="P" x="210.82" y="-10.16"/>
+<instance part="IC7" gate="P" x="172.72" y="-63.5"/>
+<instance part="P+7" gate="1" x="172.72" y="-53.34"/>
+<instance part="P-3" gate="1" x="172.72" y="-73.66"/>
+<instance part="P+11" gate="1" x="203.2" y="66.04"/>
+<instance part="P-5" gate="1" x="203.2" y="45.72"/>
 </instances>
 <busses>
 </busses>
@@ -10732,6 +10744,22 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <wire x1="20.32" y1="-17.78" x2="20.32" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="P" pin="V+"/>
 </segment>
+<segment>
+<pinref part="P+9" gate="1" pin="+12V"/>
+<pinref part="IC1" gate="P" pin="V+"/>
+</segment>
+<segment>
+<pinref part="P+13" gate="1" pin="+12V"/>
+<pinref part="IC6" gate="P" pin="V+"/>
+</segment>
+<segment>
+<pinref part="IC7" gate="P" pin="V+"/>
+<pinref part="P+7" gate="1" pin="+12V"/>
+</segment>
+<segment>
+<pinref part="IC4" gate="P" pin="V+"/>
+<pinref part="P+11" gate="1" pin="+12V"/>
+</segment>
 </net>
 <net name="-12V" class="0">
 <segment>
@@ -10744,6 +10772,22 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <pinref part="IC2" gate="P" pin="V-"/>
 <pinref part="P-2" gate="1" pin="-12V"/>
 <wire x1="20.32" y1="-33.02" x2="43.18" y2="-33.02" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P-4" gate="1" pin="-12V"/>
+<pinref part="IC1" gate="P" pin="V-"/>
+</segment>
+<segment>
+<pinref part="P-6" gate="1" pin="-12V"/>
+<pinref part="IC6" gate="P" pin="V-"/>
+</segment>
+<segment>
+<pinref part="IC7" gate="P" pin="V-"/>
+<pinref part="P-3" gate="1" pin="-12V"/>
+</segment>
+<segment>
+<pinref part="IC4" gate="P" pin="V-"/>
+<pinref part="P-5" gate="1" pin="-12V"/>
 </segment>
 </net>
 <net name="N$2" class="0">

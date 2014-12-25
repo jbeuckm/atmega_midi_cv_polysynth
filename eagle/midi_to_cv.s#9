@@ -10320,7 +10320,7 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="PAD20" gate="1" x="60.96" y="45.72" rot="MR0"/>
 <instance part="PAD21" gate="1" x="55.88" y="43.18" rot="MR0"/>
 <instance part="PAD22" gate="1" x="50.8" y="40.64" rot="MR0"/>
-<instance part="JP1" gate="A" x="93.98" y="17.78"/>
+<instance part="JP1" gate="A" x="48.26" y="-7.62"/>
 <instance part="GND5" gate="1" x="109.22" y="-86.36"/>
 <instance part="IC3" gate="A" x="193.04" y="121.92"/>
 <instance part="IC3" gate="C" x="195.58" y="93.98"/>

@@ -2116,10 +2116,10 @@ design rules under a new name.</description>
 <wire x1="5.334" y1="38.1" x2="10.414" y2="43.18" width="0.8128" layer="16"/>
 <wire x1="10.414" y1="43.18" x2="14.224" y2="44.196" width="0.8128" layer="16"/>
 <wire x1="14.224" y1="44.196" x2="14.351" y2="42.799" width="0.8128" layer="16"/>
-<wire x1="19.05" y1="40.386" x2="21.336" y2="40.386" width="0" layer="19" extent="16-16"/>
-<wire x1="16.764" y1="40.386" x2="19.05" y2="40.386" width="0" layer="19" extent="16-16"/>
-<wire x1="19.558" y1="30.226" x2="17.78" y2="30.226" width="0" layer="19" extent="16-16"/>
-<wire x1="20.32" y1="29.464" x2="19.558" y2="30.226" width="0" layer="19" extent="16-16"/>
+<wire x1="17.78" y1="30.226" x2="19.558" y2="30.226" width="0.8128" layer="16"/>
+<wire x1="19.558" y1="30.226" x2="20.32" y2="29.464" width="0.8128" layer="16"/>
+<wire x1="21.336" y1="40.386" x2="16.764" y2="40.386" width="0.8128" layer="16"/>
+<wire x1="21.336" y1="40.386" x2="19.05" y2="40.386" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="GND">
 <contactref element="OK1" pad="5"/>

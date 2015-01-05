@@ -2553,12 +2553,31 @@ design rules under a new name.</description>
 <signal name="N$45">
 <contactref element="U1" pad="5"/>
 <contactref element="IC2" pad="10"/>
-<wire x1="54.61" y1="16.51" x2="34.29" y2="35.56" width="0" layer="19" extent="1-1"/>
+<wire x1="34.29" y1="35.56" x2="34.544" y2="35.56" width="0.8128" layer="16"/>
+<wire x1="34.544" y1="35.56" x2="34.544" y2="33.02" width="0.8128" layer="16"/>
+<wire x1="34.544" y1="33.02" x2="35.306" y2="33.02" width="0.8128" layer="16"/>
+<wire x1="35.306" y1="33.02" x2="35.306" y2="25.4" width="0.8128" layer="16"/>
+<wire x1="35.306" y1="25.4" x2="37.338" y2="25.4" width="0.8128" layer="16"/>
+<via x="37.338" y="25.4" extent="1-16" drill="0.6" shape="square"/>
+<wire x1="37.338" y1="25.4" x2="37.338" y2="22.352" width="0.8128" layer="1"/>
+<wire x1="37.338" y1="22.352" x2="38.354" y2="21.336" width="0.8128" layer="1"/>
+<wire x1="38.354" y1="21.336" x2="47.244" y2="21.336" width="0.8128" layer="1"/>
+<wire x1="47.244" y1="21.336" x2="52.07" y2="16.51" width="0.8128" layer="1"/>
+<via x="52.07" y="16.51" extent="1-16" drill="0.6" shape="square"/>
+<wire x1="52.07" y1="16.51" x2="54.61" y2="16.51" width="0.8128" layer="16"/>
 </signal>
 <signal name="N$46">
 <contactref element="U1" pad="4"/>
 <contactref element="IC2" pad="12"/>
-<wire x1="54.61" y1="11.43" x2="31.75" y2="35.56" width="0" layer="19" extent="1-1"/>
+<wire x1="31.75" y1="35.56" x2="31.75" y2="31.75" width="0.8128" layer="16"/>
+<wire x1="31.75" y1="31.75" x2="33.274" y2="30.226" width="0.8128" layer="16"/>
+<via x="33.274" y="30.226" extent="1-16" drill="0.6" shape="square"/>
+<wire x1="33.274" y1="30.226" x2="33.274" y2="24.13" width="0.8128" layer="1"/>
+<wire x1="33.274" y1="24.13" x2="37.846" y2="19.558" width="0.8128" layer="1"/>
+<wire x1="37.846" y1="19.558" x2="44.196" y2="19.558" width="0.8128" layer="1"/>
+<wire x1="44.196" y1="19.558" x2="52.324" y2="11.43" width="0.8128" layer="1"/>
+<via x="52.324" y="11.43" extent="1-16" drill="0.6" shape="square"/>
+<wire x1="52.324" y1="11.43" x2="54.61" y2="11.43" width="0.8128" layer="16"/>
 </signal>
 <signal name="N$51">
 <contactref element="U4" pad="6"/>

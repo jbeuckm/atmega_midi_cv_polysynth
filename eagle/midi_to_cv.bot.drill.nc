@@ -4,7 +4,7 @@
 (This file generated from the board:)
 (.../atmega_midi_cv_polysynth/eagle/midi_to_cv.brd)
 (Current profile is .../pcbgcode.repo/profiles/mach.pp  )
-(This file generated 12/24/14 11:30 PM)
+(This file generated 12/24/14 11:36 PM)
 (Settings from pcb-machine.h)
 (spindle on time = 0.0000)
 (spindle speed = 20000.0000)

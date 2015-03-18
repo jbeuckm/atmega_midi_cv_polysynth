@@ -18,25 +18,45 @@ AH_MCP4922 Velocity4(10,11,12,HIGH,LOW);
 AH_MCP4922 pitchDACs[4] = { Pitch1, Pitch2, Pitch3, Pitch4 };
 AH_MCP4922 velocityDACs[4] = { Velocity1, Velocity2, Velocity3, Velocity4 };
 
-int noteNumbers[4] = { -1, -1, -1, -1 };  // keep track of notes that have been gated on
 int gatePins[4] = { 2, 3, 4, 5 };
 
+int noteNumbers[4] = { -1, -1, -1, -1 };  // keep track of notes that have been gated on
+int noteBasePitches[4] = { 0, 0, 0, 0 };
 int nextNoteOutput = 0;
 
+int pitchbendOffset = 0;
 
 MIDI_CREATE_DEFAULT_INSTANCE();
 
 
 void handleNoteOn(byte channel, byte pitch, byte velocity)
 {
+int i = 0;
 
-  pitchDACs[nextNoteOutput].setValue((pitch - 12) * 42);
+  while (i < 4) {
+    
+    if (noteNumbers[nextNoteOutput] == -1) {
+      break;
+    }
+
+    nextNoteOutput = (nextNoteOutput + 1) % 4;
+    i++;
+  }
+/*
+    if (i == 4) {
+      return;
+    }
+*/
+  int basePitch = (pitch - 12) * 42;
+  noteBasePitches[nextNoteOutput] = basePitch;  
+  pitchDACs[nextNoteOutput].setValue(basePitch + pitchbendOffset);
+
   velocityDACs[nextNoteOutput].setValue(velocity * 32);
+  
   digitalWrite(gatePins[nextNoteOutput], HIGH);
   
   noteNumbers[nextNoteOutput] = pitch;
   nextNoteOutput = (nextNoteOutput + 1) % 4;
-
 }
 
 void handleNoteOff(byte channel, byte pitch, byte velocity)
@@ -53,18 +73,17 @@ void handleNoteOff(byte channel, byte pitch, byte velocity)
 
 }
 
-void handleControlChange(byte channel, byte number, byte value)
-{
-  if (number == 1) {
-//    AnalogOutput4.setValue(value * 32);
-  }
-}
-
+/*
 void handlePitchBend(byte channel, int bend)
 {
-//    AnalogOutput2.setValue((float)bend/4.0 + 2048.0);
+  pitchbendOffset = bend / 4;
+  
+  pitchDACs[0].setValue(noteBasePitches[0] + pitchbendOffset);
+  pitchDACs[1].setValue(noteBasePitches[1] + pitchbendOffset);
+  pitchDACs[2].setValue(noteBasePitches[2] + pitchbendOffset);
+  pitchDACs[3].setValue(noteBasePitches[3] + pitchbendOffset);
 }
-
+*/
 
 // -----------------------------------------------------------------------------
 
@@ -90,17 +109,12 @@ void setup()
   pinMode(11, OUTPUT);
   pinMode(12, OUTPUT);
 
-  // Connect the handleNoteOn function to the library,
-  // so it is called upon reception of a NoteOn.
-  MIDI.setHandleNoteOn(handleNoteOn);  // Put only the name of the function
 
-  // Do the same for NoteOffs
+  MIDI.setHandleNoteOn(handleNoteOn);
   MIDI.setHandleNoteOff(handleNoteOff);
   
-  MIDI.setHandleControlChange(handleControlChange);
-  MIDI.setHandlePitchBend(handlePitchBend);
+//  MIDI.setHandlePitchBend(handlePitchBend);
 
-  // Initiate MIDI communications
   MIDI.begin(4);
 
   // C8 at full velocity for 8.0V calibration on powerup

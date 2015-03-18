@@ -483,7 +483,7 @@
             <prim>27</prim>
             <prim>32</prim>
           </primitive>
-          <TargetDepth state="Value">-0.01</TargetDepth>
+          <TargetDepth state="Value">-0.002</TargetDepth>
           <DepthIncrement state="Default">0.4</DepthIncrement>
           <FinalDepthIncrement state="Default">0</FinalDepthIncrement>
           <CutOrdering state="Default">DepthFirst</CutOrdering>

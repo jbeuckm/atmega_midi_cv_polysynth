@@ -583,7 +583,7 @@
           <CutWidth state="Default">0</CutWidth>
           <StepOver state="Default">0.4</StepOver>
           <StepoverFeedrate state="Default">Plunge Feedrate</StepoverFeedrate>
-          <InsideOutside state="Value">Inside</InsideOutside>
+          <InsideOutside state="Value">Outside</InsideOutside>
           <MillingDirection state="Default">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <CornerOvercut state="Default">False</CornerOvercut>
@@ -602,21 +602,21 @@
           </HoldingTabs>
           <Tabs>
             <HoldingTab>
-              <NormalInverted>true</NormalInverted>
+              <NormalInverted>false</NormalInverted>
               <ParentEntityID>6</ParentEntityID>
               <ParametricPoint>0.25000000000000006</ParametricPoint>
               <Normal>
-                <X>-0</X>
-                <Y>-1</Y>
+                <X>0</X>
+                <Y>1</Y>
               </Normal>
             </HoldingTab>
             <HoldingTab>
-              <NormalInverted>true</NormalInverted>
+              <NormalInverted>false</NormalInverted>
               <ParentEntityID>6</ParentEntityID>
               <ParametricPoint>0.75</ParametricPoint>
               <Normal>
-                <X>4.58414668232324E-16</X>
-                <Y>1</Y>
+                <X>-4.58414668232324E-16</X>
+                <Y>-1</Y>
               </Normal>
             </HoldingTab>
           </Tabs>

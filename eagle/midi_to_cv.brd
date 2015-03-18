@@ -1902,11 +1902,11 @@ design rules under a new name.</description>
 <element name="R3" library="rcl" package="0207/10" value="270" x="14.224" y="39.116" rot="R90"/>
 <element name="R5" library="rcl" package="0207/10" value="3.3k" x="72.39" y="59.69" rot="R90"/>
 <element name="R6" library="pot" package="B64W" value="10k" x="77.47" y="68.58" rot="R180"/>
-<element name="PAD3" library="wirepad" package="2,54/0,9" value="pitch cv" x="88.9" y="63.5"/>
+<element name="PITCH_4" library="wirepad" package="2,54/0,9" value="" x="88.9" y="63.5"/>
 <element name="R7" library="rcl" package="0207/10" value="5k" x="82.55" y="73.66"/>
 <element name="R12" library="rcl" package="0207/10" value="1k" x="82.55" y="53.594"/>
 <element name="R13" library="rcl" package="0207/10" value="1k" x="84.328" y="50.8" rot="R180"/>
-<element name="PAD5" library="wirepad" package="2,54/0,9" value="velocity cv" x="90.424" y="53.594"/>
+<element name="VEL_4" library="wirepad" package="2,54/0,9" value="" x="90.424" y="53.594"/>
 <element name="U4" library="MCP4822" package="DIP254P762X432-8" value="MCP4822-E/P" x="69.85" y="46.99">
 <attribute name="PACKAGE" value="DIP-8" x="69.85" y="46.99" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="11M1705" x="69.85" y="46.99" size="1.778" layer="27" display="off"/>
@@ -1934,11 +1934,11 @@ design rules under a new name.</description>
 <element name="PAD14" library="wirepad" package="2,54/0,9" value="gate LED" x="20.32" y="11.43"/>
 <element name="R8" library="rcl" package="0207/10" value="3.3k" x="39.624" y="60.198"/>
 <element name="R9" library="pot" package="B64W" value="10k" x="43.18" y="66.04" rot="R270"/>
-<element name="PAD4" library="wirepad" package="2,54/0,9" value="pitch cv" x="46.99" y="74.422"/>
+<element name="PITCH_1" library="wirepad" package="2,54/0,9" value="" x="46.99" y="74.422"/>
 <element name="R10" library="rcl" package="0207/10" value="5k" x="41.91" y="72.39"/>
 <element name="R11" library="rcl" package="0207/10" value="1k" x="58.42" y="74.93" rot="R180"/>
 <element name="R14" library="rcl" package="0207/10" value="1k" x="66.04" y="69.85" rot="R90"/>
-<element name="PAD6" library="wirepad" package="2,54/0,9" value="velocity cv" x="53.34" y="71.12"/>
+<element name="VEL_1" library="wirepad" package="2,54/0,9" value="" x="53.34" y="71.12"/>
 <element name="U2" library="MCP4822" package="DIP254P762X432-8" value="MCP4822-E/P" x="38.1" y="55.88" rot="R90">
 <attribute name="PACKAGE" value="DIP-8" x="72.39" y="41.91" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="11M1705" x="72.39" y="41.91" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1948,11 +1948,11 @@ design rules under a new name.</description>
 </element>
 <element name="R15" library="rcl" package="0207/10" value="3.3k" x="12.7" y="59.69"/>
 <element name="R24" library="pot" package="B64W" value="10k" x="11.43" y="64.77" rot="R270"/>
-<element name="PAD23" library="wirepad" package="2,54/0,9" value="pitch cv" x="21.59" y="73.66"/>
+<element name="PITCH_2" library="wirepad" package="2,54/0,9" value="" x="21.59" y="73.66"/>
 <element name="R25" library="rcl" package="0207/10" value="5k" x="13.97" y="71.12"/>
 <element name="R26" library="rcl" package="0207/10" value="1k" x="31.75" y="67.31" rot="R90"/>
 <element name="R27" library="rcl" package="0207/10" value="1k" x="34.29" y="67.31" rot="R270"/>
-<element name="PAD24" library="wirepad" package="2,54/0,9" value="velocity cv" x="29.21" y="73.66"/>
+<element name="VEL_2" library="wirepad" package="2,54/0,9" value="" x="29.21" y="73.66"/>
 <element name="U3" library="MCP4822" package="DIP254P762X432-8" value="MCP4822-E/P" x="20.32" y="55.88" rot="R90">
 <attribute name="PACKAGE" value="DIP-8" x="54.61" y="41.91" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="11M1705" x="54.61" y="41.91" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1962,11 +1962,11 @@ design rules under a new name.</description>
 </element>
 <element name="R28" library="rcl" package="0207/10" value="3.3k" x="74.422" y="42.418" rot="R270"/>
 <element name="R29" library="pot" package="B64W" value="10k" x="80.01" y="41.91" rot="R90"/>
-<element name="PAD25" library="wirepad" package="2,54/0,9" value="pitch cv" x="91.44" y="39.37"/>
+<element name="PITCH_3" library="wirepad" package="2,54/0,9" value="" x="91.44" y="39.37"/>
 <element name="R30" library="rcl" package="0207/10" value="5k" x="87.63" y="41.91" rot="R270"/>
 <element name="R31" library="rcl" package="0207/10" value="1k" x="85.09" y="20.828"/>
 <element name="R32" library="rcl" package="0207/10" value="1k" x="85.09" y="23.876" rot="R180"/>
-<element name="PAD26" library="wirepad" package="2,54/0,9" value="velocity cv" x="91.44" y="33.02"/>
+<element name="VEL_3" library="wirepad" package="2,54/0,9" value="" x="91.44" y="33.02"/>
 <element name="U5" library="MCP4822" package="DIP254P762X432-8" value="MCP4822-E/P" x="69.85" y="31.75">
 <attribute name="PACKAGE" value="DIP-8" x="55.88" y="-2.54" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="11M1705" x="55.88" y="-2.54" size="1.778" layer="27" display="off"/>
@@ -2394,7 +2394,7 @@ design rules under a new name.</description>
 <wire x1="78.486" y1="66.294" x2="80.01" y2="64.77" width="0.8128" layer="16"/>
 </signal>
 <signal name="N$9">
-<contactref element="PAD3" pad="1"/>
+<contactref element="PITCH_4" pad="1"/>
 <contactref element="R7" pad="2"/>
 <contactref element="IC7" pad="1"/>
 <wire x1="87.63" y1="73.66" x2="87.63" y2="67.31" width="0.8128" layer="16"/>
@@ -2414,7 +2414,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$19">
 <contactref element="R12" pad="2"/>
-<contactref element="PAD5" pad="1"/>
+<contactref element="VEL_4" pad="1"/>
 <contactref element="IC7" pad="7"/>
 <wire x1="82.55" y1="57.15" x2="82.55" y2="56.134" width="0.8128" layer="16"/>
 <wire x1="82.55" y1="56.134" x2="85.09" y2="53.594" width="0.8128" layer="16"/>
@@ -2626,7 +2626,7 @@ design rules under a new name.</description>
 <wire x1="45.466" y1="60.96" x2="49.53" y2="60.96" width="0.8128" layer="16"/>
 </signal>
 <signal name="N$17">
-<contactref element="PAD4" pad="1"/>
+<contactref element="PITCH_1" pad="1"/>
 <contactref element="R10" pad="2"/>
 <contactref element="IC1" pad="1"/>
 <wire x1="46.99" y1="72.39" x2="46.99" y2="74.422" width="0.8128" layer="16"/>
@@ -2645,7 +2645,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$21">
 <contactref element="R11" pad="2"/>
-<contactref element="PAD6" pad="1"/>
+<contactref element="VEL_1" pad="1"/>
 <contactref element="IC1" pad="7"/>
 <wire x1="57.15" y1="63.5" x2="56.642" y2="63.5" width="0.8128" layer="16"/>
 <wire x1="56.642" y1="63.5" x2="54.356" y2="65.786" width="0.8128" layer="16"/>
@@ -2692,7 +2692,7 @@ design rules under a new name.</description>
 <wire x1="17.78" y1="60.96" x2="20.32" y2="63.5" width="0.8128" layer="16"/>
 </signal>
 <signal name="N$49">
-<contactref element="PAD23" pad="1"/>
+<contactref element="PITCH_2" pad="1"/>
 <contactref element="R25" pad="2"/>
 <contactref element="IC4" pad="1"/>
 <wire x1="19.05" y1="71.12" x2="21.59" y2="73.66" width="0.8128" layer="16"/>
@@ -2709,7 +2709,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$52">
 <contactref element="R26" pad="2"/>
-<contactref element="PAD24" pad="1"/>
+<contactref element="VEL_2" pad="1"/>
 <contactref element="IC4" pad="7"/>
 <wire x1="31.75" y1="72.39" x2="30.48" y2="72.39" width="0.8128" layer="16"/>
 <wire x1="30.48" y1="72.39" x2="29.21" y2="73.66" width="0.8128" layer="16"/>
@@ -2747,7 +2747,7 @@ design rules under a new name.</description>
 <wire x1="76.2" y1="38.1" x2="80.01" y2="34.29" width="0.8128" layer="16"/>
 </signal>
 <signal name="N$57">
-<contactref element="PAD25" pad="1"/>
+<contactref element="PITCH_3" pad="1"/>
 <contactref element="R30" pad="2"/>
 <contactref element="IC6" pad="1"/>
 <wire x1="85.09" y1="34.29" x2="87.63" y2="36.83" width="0.8128" layer="16"/>
@@ -2763,7 +2763,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$59">
 <contactref element="R31" pad="2"/>
-<contactref element="PAD26" pad="1"/>
+<contactref element="VEL_3" pad="1"/>
 <contactref element="IC6" pad="7"/>
 <wire x1="90.17" y1="20.828" x2="88.138" y2="19.05" width="0.8128" layer="16"/>
 <wire x1="88.138" y1="19.05" x2="82.55" y2="24.638" width="0.8128" layer="16"/>

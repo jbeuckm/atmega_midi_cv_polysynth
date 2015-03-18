@@ -18,7 +18,7 @@ AH_MCP4922 Velocity4(10,11,12,HIGH,LOW);
 AH_MCP4922 pitchDACs[4] = { Pitch1, Pitch2, Pitch3, Pitch4 };
 AH_MCP4922 velocityDACs[4] = { Velocity1, Velocity2, Velocity3, Velocity4 };
 
-int noteNumbers[4] = { 0, 0, 0, 0 };  // keep track of notes that have been gated on
+int noteNumbers[4] = { -1, -1, -1, -1 };  // keep track of notes that have been gated on
 int gatePins[4] = { 2, 3, 4, 5 };
 
 int nextNoteOutput = 0;
@@ -46,6 +46,7 @@ void handleNoteOff(byte channel, byte pitch, byte velocity)
   while (i < 4) {
     if (noteNumbers[i] == pitch) {
       digitalWrite(gatePins[i], LOW);
+      noteNumbers[i] = -1;
     }
     i++;
   }

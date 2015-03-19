@@ -73,17 +73,17 @@ void handleNoteOff(byte channel, byte pitch, byte velocity)
 
 }
 
-/*
+
 void handlePitchBend(byte channel, int bend)
  {
- pitchbendOffset = bend / 4;
+ pitchbendOffset = bend >> 4;
  
  pitchDACs[0].setValue(noteBasePitches[0] + pitchbendOffset);
  pitchDACs[1].setValue(noteBasePitches[1] + pitchbendOffset);
  pitchDACs[2].setValue(noteBasePitches[2] + pitchbendOffset);
  pitchDACs[3].setValue(noteBasePitches[3] + pitchbendOffset);
  }
- */
+ 
 
 // -----------------------------------------------------------------------------
 
@@ -113,7 +113,7 @@ void setup()
   MIDI.setHandleNoteOn(handleNoteOn);
   MIDI.setHandleNoteOff(handleNoteOff);
 
-  //  MIDI.setHandlePitchBend(handlePitchBend);
+  MIDI.setHandlePitchBend(handlePitchBend);
 
   MIDI.begin(4);
 

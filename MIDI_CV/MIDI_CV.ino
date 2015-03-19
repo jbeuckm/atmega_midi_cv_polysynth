@@ -22,7 +22,7 @@ int gatePins[4] = { 2, 3, 4, 5 };
 
 int noteNumbers[4] = { -1, -1, -1, -1 };  // keep track of notes that have been gated on
 int noteBasePitches[4] = { 0, 0, 0, 0 };
-int nextNoteOutput = 0;
+int nextNoteOutput = -1;
 
 int pitchbendOffset = 0;
 
@@ -31,32 +31,32 @@ MIDI_CREATE_DEFAULT_INSTANCE();
 
 void handleNoteOn(byte channel, byte pitch, byte velocity)
 {
-int i = 0;
+  int i = 0;
 
   while (i < 4) {
-    
+
+    nextNoteOutput = (nextNoteOutput + 1) % 4;
+
     if (noteNumbers[nextNoteOutput] == -1) {
       break;
     }
 
-    nextNoteOutput = (nextNoteOutput + 1) % 4;
     i++;
   }
-/*
-    if (i == 4) {
-      return;
-    }
-*/
+
+  if (i == 4) {
+    return;
+  }
+
+  noteNumbers[nextNoteOutput] = pitch;
+
   int basePitch = (pitch - 12) * 42;
   noteBasePitches[nextNoteOutput] = basePitch;  
   pitchDACs[nextNoteOutput].setValue(basePitch + pitchbendOffset);
 
   velocityDACs[nextNoteOutput].setValue(velocity * 32);
-  
+
   digitalWrite(gatePins[nextNoteOutput], HIGH);
-  
-  noteNumbers[nextNoteOutput] = pitch;
-  nextNoteOutput = (nextNoteOutput + 1) % 4;
 }
 
 void handleNoteOff(byte channel, byte pitch, byte velocity)
@@ -75,15 +75,15 @@ void handleNoteOff(byte channel, byte pitch, byte velocity)
 
 /*
 void handlePitchBend(byte channel, int bend)
-{
-  pitchbendOffset = bend / 4;
-  
-  pitchDACs[0].setValue(noteBasePitches[0] + pitchbendOffset);
-  pitchDACs[1].setValue(noteBasePitches[1] + pitchbendOffset);
-  pitchDACs[2].setValue(noteBasePitches[2] + pitchbendOffset);
-  pitchDACs[3].setValue(noteBasePitches[3] + pitchbendOffset);
-}
-*/
+ {
+ pitchbendOffset = bend / 4;
+ 
+ pitchDACs[0].setValue(noteBasePitches[0] + pitchbendOffset);
+ pitchDACs[1].setValue(noteBasePitches[1] + pitchbendOffset);
+ pitchDACs[2].setValue(noteBasePitches[2] + pitchbendOffset);
+ pitchDACs[3].setValue(noteBasePitches[3] + pitchbendOffset);
+ }
+ */
 
 // -----------------------------------------------------------------------------
 
@@ -112,8 +112,8 @@ void setup()
 
   MIDI.setHandleNoteOn(handleNoteOn);
   MIDI.setHandleNoteOff(handleNoteOff);
-  
-//  MIDI.setHandlePitchBend(handlePitchBend);
+
+  //  MIDI.setHandlePitchBend(handlePitchBend);
 
   MIDI.begin(4);
 
@@ -123,12 +123,17 @@ void setup()
   handleNoteOn(4, 108, 127);
   handleNoteOn(4, 108, 127);
 
+  noteNumbers[0] = -1;
+  noteNumbers[1] = -1;
+  noteNumbers[2] = -1;
+  noteNumbers[3] = -1;
+
   pinMode(13, OUTPUT);
   digitalWrite(13, LOW);
 }
 
 void loop()
 {
-    MIDI.read();
+  MIDI.read();
 }
 
